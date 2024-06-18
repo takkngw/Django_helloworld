@@ -11,7 +11,8 @@
 </div>
 
 <div class="source-code">
-    <span style="background-color:orange">{{ snippet.code }}</span>
+    <pre id = "codeBlock"><code>{{ snippet.code }}</code></pre>
+    <button id="copyButton" onclick="copyCode()">コピー</button>
 </div>
 
 <p>{{ snippet.description |safe }}</p>
