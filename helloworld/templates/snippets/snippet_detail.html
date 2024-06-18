@@ -14,5 +14,5 @@
     <span style="background-color:orange">{{ snippet.code }}</span>
 </div>
 
-<p>{{ snippet.description }}</p>
+<p>{{ snippet.description |safe }}</p>
 {% endblock %}
