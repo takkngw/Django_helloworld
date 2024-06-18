@@ -12,22 +12,21 @@ main {
 }
 
 .source-code{
+    color: #f8f8f2;
     position: relative;
     /* margin-bottom: 20px; */
     padding: 15px;
     border-radius: 5px;
     overflow-x: auto;
-    background: #f4f4f4;
+    background: #2e2e2e;
     border-left: solid 6px #5bb7ae;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
 }
 
-button {
+#copyButton {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #50fa7b;
-    color: #282a36;
     border: none;
     padding: 5px 10px;
     cursor: pointer;

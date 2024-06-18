@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Djangoスニペット</title>
+    <title>プログラム備忘録</title>
     {% bootstrap_css %}
     {% bootstrap_javascript %}
     <link rel="stylesheet" href="{% static 'snippets/css/style.css' %}">
@@ -13,7 +13,7 @@
 <body>
 <nav class="navbar navbar-expand flex-md-row navbar-dark bg-dark">
     <div class="container justify-content-between">
-        <a href="/" class="navbar-brand">Djangoスニペット</a>
+        <a href="/" class="navbar-brand">プログラム備忘録</a>
         <ul class="navbar-nav mr-md-2">
             {% if user.is_authenticated %}
             <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">ログアウト</a></li>
