@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block main %}
-<h2>{{ snippet.title }}</h2>
+<h1>{{ snippet.title }}</h1>
 
 <div class="snippet-date">
     投稿日： {{ snippet.created_at|date:'DATETIME_FORMAT' }}
@@ -9,12 +9,12 @@
     投稿者： {{ snippet.created_by.username }}
     <a href="{% url 'snippet_edit' snippet.id %}">編集</a>
     {% endif %}
-</div>
+</div><br>
 
-<div class="source-code">
-    <pre id = "codeBlock"><code>{{ snippet.code }}</code></pre>
-    <button id="copyButton" onclick="copyCode()">コピー</button>
-</div>
-
+<h2>数式</h2>
+<div class="fomula">
+    <p>$${{ snippet.code }}$$</p>
+</div><br>
+<h2>解説</h2>
 <p>{{ snippet.description |safe }}</p>
 {% endblock %}

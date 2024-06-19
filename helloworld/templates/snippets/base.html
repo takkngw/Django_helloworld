@@ -3,17 +3,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>プログラム備忘録</title>
+    <title>数学公式の部屋</title>
     {% bootstrap_css %}
     {% bootstrap_javascript %}
     <link rel="stylesheet" href="{% static 'snippets/css/style.css' %}">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     {% block extraheader %}{% endblock %}
 </head>
 <body>
 <nav class="navbar navbar-expand flex-md-row navbar-dark bg-dark">
     <div class="container justify-content-between">
-        <a href="/" class="navbar-brand">プログラム備忘録</a>
+        <a href="/" class="navbar-brand">数学公式の部屋</a>
         <ul class="navbar-nav mr-md-2">
             {% if user.is_authenticated %}
             <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">ログアウト</a></li>
@@ -29,34 +30,5 @@
         {% block main %}{% endblock %}
     </div>
 </main>
-   <!-- Prism.jsのJavaScript -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
-   <script>
-       function copyCode() {
-           // コードブロックの要素を取得
-           var codeBlock = document.getElementById('codeBlock').innerText;
-           var copyButton = document.getElementById('copyButton');
-           
-           // 一時的なtextareaを作成
-           var tempTextarea = document.createElement('textarea');
-           tempTextarea.value = codeBlock;
-           document.body.appendChild(tempTextarea);
-           
-           // テキストを選択し、クリップボードにコピー
-           tempTextarea.select();
-           document.execCommand('copy');
-           
-           // 一時的なtextareaを削除
-           document.body.removeChild(tempTextarea);
-           
-           // ボタンのテキストを変更
-           copyButton.textContent = 'コピーされました！';
-           
-           // 2秒後に元のテキストに戻す
-           setTimeout(function() {
-               copyButton.textContent = 'コピー';
-           }, 2000);
-       }
-   </script>
 </body>
 </html>
